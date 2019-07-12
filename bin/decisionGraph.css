@@ -1,0 +1,297 @@
+/*
+	Dies ist die css-Datei, in der das Layout des Erreichbarkeits-Graphen beschrieben ist.
+*/
+
+/*
+	Style-Angaben fuer den Graphen
+*/
+graph {
+	
+	padding: 50px, 50px;
+	
+}
+
+/*
+	Style-Angabe fuer einen Knoten
+*/
+node {
+	fill-color: #ffffff;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer einen Default-Knoten
+*/
+node.default {
+	fill-color: #ffffff;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer den letzten erzeugten Knoten
+*/
+node.lastNode {
+	fill-color: white;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: gray;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	/*size: 60px, 30px;*/
+
+	/*size-mode: fit;*/
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer den Startknoten des Pfades bei Unbeschränktheit
+*/
+node.mStartNode {
+	fill-color: #dbbf17;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	/*size: 60px, 30px;*/
+
+	/*size-mode: fit;*/
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer den Endknoten des Pfades bei Unbeschränktheit
+*/
+node.mEndNode {
+	fill-color: #FF9999;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	/*size: 60px, 30px;*/
+
+	/*size-mode: fit;*/
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer einen unbeschränkten Knoten
+*/
+node.unlimited {
+	
+	fill-color: red;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer einen unbeschränkten Startknoten
+*/
+ node.unlimitedStartNode {
+	fill-color: yellow;
+	
+	text-color: #003366;
+	text-size: 14;
+	text-alignment: center;
+
+	stroke-mode: plain;
+	stroke-color: #003366;
+	stroke-width: 1px;
+
+	shape: rounded-box;
+	size-mode: dyn-size;
+}
+
+/*
+   zusaetzliches Attribut "highlight" fuer einen Knoten, der
+   hervorgehoben werden soll
+*/
+node.highlight {
+	text-style: bold;
+	
+	stroke-color: #cc0000;
+	stroke-width: 3px;
+}
+
+/*
+	Style-Angabe fuer einen  Startknoten
+*/
+node.startNode{
+	stroke-color: gray;
+	stroke-width: 1px;
+
+	fill-color: gray;
+	
+	text-color: #000000;
+	text-size: 14;
+
+	stroke-mode: plain;
+	shape: box;
+
+	size-mode: dyn-size;
+}
+
+/*
+	Style-Angabe fuer eine Kante
+*/
+edge {
+	fill-color: #003366;
+	text-color: #003366;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-color: purple;
+
+	fill-color: #000000;
+	text-color: #000000;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-padding: 10px, 30px, 10px, 10px;
+
+	text-alignment: along;
+	
+	text-alignment: along;
+	text-style: bold;
+	text-background-mode: plain;
+	text-background-color: white;
+}
+
+/*
+	Style-Angabe fuer eine unbeschränkte Kante
+*/
+edge.unlimited {
+	fill-color: red;
+	text-color: #003366;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-color: purple;
+
+	fill-color: red;
+	text-color: #000000;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+
+	text-alignment: along;
+	shadow-color: red;
+	shadow-width: 10px;
+	
+	fill-color: #777; 
+	shadow-mode: plain; 
+	shadow-width: 3px; 
+	shadow-color: #FC0; 
+	shadow-offset: 0px;
+	
+	text-alignment: along;
+	text-style: bold;
+	text-background-mode: plain;
+	text-background-color: white;
+}
+
+/*
+	Style-Angabe fuer die letzte Kante, die hinzugefuegt wurde
+*/
+edge.lastEdge {
+	fill-color: red;
+	text-color: #003366;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-color: purple;
+
+	fill-color: red;
+	text-color: #000000;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	/*text-padding: 30px, 30px, 30px, 30px;*/
+
+	text-alignment: along;
+	/*padding: 10px, 10px, 10px;*/
+	shadow-color: red;
+	shadow-width: 10px;
+	
+	fill-color: #777; 
+	shadow-mode: plain; 
+	shadow-width: 3px; 
+	shadow-color: gray; 
+	shadow-offset: 0px;
+	
+	text-alignment: along;
+	text-style: bold;
+	text-background-mode: plain;
+	text-background-color: white;
+}
+
+/*
+	Style-Angabe fuer eine Standard-Kante
+*/
+edge.default {
+	fill-color: #003366;
+	text-color: #003366;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-color: purple;
+
+	fill-color: #000000;
+	text-color: #000000;
+	arrow-shape: arrow;
+	arrow-size: 9px, 6px;
+	text-size:  12;
+	text-padding: 10px, 30px, 10px, 10px;
+
+	text-alignment: along;
+	
+	text-alignment: along;
+	text-style: bold;
+	text-background-mode: plain;
+	text-background-color: white;
+}
